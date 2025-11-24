@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+.grid-letters {
+  font-size: 2em;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  padding: 1em;
+  color: white !important;
+}
+
+html, body {
+  height: 100%;
+  background: #1E2125 !important;
+}
+
+.container {
+  background: #212529;
+}
+
+label {
+  color: white;
+}
+
+p {
+  color: white;
+}

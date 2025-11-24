@@ -1,0 +1,26 @@
+<div class="container my-5">
+
+  <h1>Here are your letters :</h1>
+    <div class="d-flex justify-content-center p-2">
+      <p class="grid-letters">
+        <% @letters.each do |letter| %>
+        <span class="badge text-bg-primary p-4 m-1"> <%= letter %></span>
+        <% end %>
+      </p>
+
+    </div>
+</div>
+<div class="container my-5">
+  <div class="d-flex flex-column justify-content-center p-2">
+    <h2 class=>What is the longest word you can find ?</h2>
+      <div class="form-container d-flex justify-content-center">
+        <form action="/score" method="post" data-turbo="false">
+          <label for="user_word">Type your word :</label>
+          <input type="text" name="user_word" id="user_word">
+          <input type="submit" value="Submit" class="btn btn-primary d-inline-flex align-items-center">
+          <%= hidden_field_tag :letters, @letters.join(" ") %>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        </form>
+      </div>
+  </div>
+</div>
